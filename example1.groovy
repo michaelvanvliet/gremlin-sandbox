@@ -28,7 +28,7 @@
 def persons = 15 as int
 def relations = 2 as int
 def year = Calendar.getInstance().get(Calendar.YEAR)
-def neo4jLocation = './db/neo4j'
+def neo4jLocation = './db/neo4j_example1'
 
 // remove any old data
 def neo4jDirectory = new File(neo4jLocation)
