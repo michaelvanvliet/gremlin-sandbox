@@ -28,12 +28,13 @@
 def persons = 15 as int
 def relations = 2 as int
 def year = Calendar.getInstance().get(Calendar.YEAR)
-def neo4jLocation = './db/neo4j_example1'
+//def neo4jLocation = './db/neo4j_example1'
+def neo4jLocation = '/Users/miv/Documents/workspace-nbic/conceptwiki/code/conceptwiki/util/fix-ups/workshop/neo4j_workshopdata/'
 
 // remove any old data
 def neo4jDirectory = new File(neo4jLocation)
 if (neo4jDirectory.isDirectory()){
-    neo4jDirectory.eachFileRecurse { it.delete() }
+    //neo4jDirectory.eachFileRecurse { it.delete() }
 }
 
 // set Neo4j location
@@ -43,13 +44,13 @@ def g = new Neo4jGraph(neo4jLocation)
 def random = new Random()
 
 persons.times {
-    g.addVertex([no: it, name: "person_${it}" as String])
+    //g.addVertex([no: it, name: "person_${it}" as String])
 }
 
 // add relations between persons
 g.V.each { p1 ->
 
-    if (p1){
+    if (p1 && 1 == 2){
 
         relations.times {
 
